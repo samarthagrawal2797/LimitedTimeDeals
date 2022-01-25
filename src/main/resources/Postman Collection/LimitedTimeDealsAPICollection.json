@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "21244be0-1d6c-4880-8e83-f8f88c84fe84",
+		"name": "Limited Time Deals",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add a Deal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": 1,\r\n    \"name\" : \"Deal7\",\r\n    \"quantity\" : 1,\r\n    \"price\" : 48,\r\n    \"validUpto\": 1743085475000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/deal/addNewDeal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deal",
+						"addNewDeal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a deal",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quantityAdded\" : 0,\r\n    \"validUpto\" : 1753095475000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/deal/updateDeal/Deal6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deal",
+						"updateDeal",
+						"Deal6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Deal",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/deal/deleteDeal/Deal7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deal",
+						"deleteDeal",
+						"Deal7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Claim a Deal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\" : 1,\r\n    \"dealId\" : \"Deal6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/deal/claimDeal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deal",
+						"claimDeal"
+					]
+				},
+				"description": "Claim a deal"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Deal Info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/deal/getDealInfo/Deal1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deal",
+						"getDealInfo",
+						"Deal1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
